@@ -2,15 +2,16 @@ package leetcode.easy;
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-        int count = 0;
+        int count = 0;// creating a counter and initializing it
 
-        for(int i = s.length()-1;i>=0;i--){
-            if(s[i] != ' '){
-                count++;
+// used for loop from backwards to iterate the string
+        for(int i = s.length()-1;i>=0;i--){ 
+            if(s[i] != ' '){ 
+                count++; //increment the count if we dont find the spaces
             }
             else
             {
-                if(count>0)
+                if(count>0) 
                     return count;
             }
         }
